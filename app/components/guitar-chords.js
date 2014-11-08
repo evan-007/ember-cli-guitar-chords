@@ -7,5 +7,14 @@ export default Ember.Component.extend({
   size: '3',
   didInsertElement: function() {
     chords.replaceOne(this.get('element'));
+  },
+  click: function() {
+    this.sendAction();
+  },
+  actions: {
+    playMusic: function() {
+      var acoustic = Synth.createInstrument('acoustic');
+      acoustic.play('C', 4, 2);
+    }
   }
 });
