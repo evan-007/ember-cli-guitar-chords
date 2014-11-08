@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-guitar-chords",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "directories": {
     "doc": "doc",
     "test": "tests"
