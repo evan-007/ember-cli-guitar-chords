@@ -1,6 +1,36 @@
 # Ember-cli-guitar-chords
 
-This README outlines the details of collaborating on this Ember addon.
+A simple ember component wrapper for (ChordsJS)[https://github.com/acspike/ChordJS].
+
+Turns this:
+
+```html
+   {{guitar-chords name='C' positions='x32010' fingers='-32010' size=3}}
+```
+
+into this:
+
+image goes here
+
+## Using with an Ember CLI project
+
+`npm install --save ember-cli-guitar-chords`
+
+Then you can use the `{{guitar-chords}}` component.
+
+The component takes 4 attributes: name, positions, fingers, and size.
+The defaults are an open D chord:
+
+```js
+name: 'D',
+positions: 'xx0232',
+fingers: '---132',
+size: '3'
+```
+
+## Contributing
+
+Do it!
 
 ## Installation
 

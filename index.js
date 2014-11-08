@@ -5,6 +5,7 @@ module.exports = {
 
   included: function(app) {
     app.import('vendor/chordsJs/chords.js');
+    app.import('vendor/audiosynth/audiosynth.js ')
   }
 
 };
