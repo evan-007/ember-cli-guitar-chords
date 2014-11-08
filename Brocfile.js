@@ -4,6 +4,8 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 var app = new EmberAddon();
 
+app.import('vendor/ChordJS/chords.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
