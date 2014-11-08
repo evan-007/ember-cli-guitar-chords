@@ -1,2 +1,4 @@
-<chord {{bind-attr name=name positions=positions fingers=fingers size=size }}></chord>
-<button {{action 'playMusic' }}>Play!</button>
+<chord {{bind-attr name=name positions=positions fingers=fingers size=size music=music}}></chord>
+{{#if music}}
+  <button {{action 'playMusic' }}>Play!</button>
+{{/if}}
