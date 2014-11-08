@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   fingers: '---132',
   size: '3',
   didInsertElement: function() {
-    chords.replace();
-    console.log('hi')
+    // chords.replace();
+    chords.replaceOne(this.get('element'));
   }
 });
