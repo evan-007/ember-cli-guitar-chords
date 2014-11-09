@@ -5,8 +5,10 @@ export default Ember.Component.extend({
   title: 'D',
   fret: 'x,8,7,5,6,5',
   label: 'x,4,3,1,2,1',
-  footer: ' ,F,A,C,F,A',
-  id: 'cat',
+  footer: '',
+  id: function(){
+    return this.get('fret')
+  }.property('fret'),
   didInsertElement: function() {
     // chords.replaceOne(this.get('element'));
     // var placeholder = this.get('element');

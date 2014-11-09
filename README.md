@@ -1,16 +1,17 @@
 # Ember-cli-guitar-chords
 
-A simple ember component wrapper for (ChordsJS)[https://github.com/acspike/ChordJS].
+A simple ember component wrapper for <a href='http://chordography.blogspot.co.uk/'>Chordography</a> and <a href='https://github.com/keithwhor/audiosynth'>AudioSynth</a> for easily display
+guitar chord diagrams with optional audio.
 
 Turns this:
 
 ```html
-   {{guitar-chords name='C' positions='x32010' fingers='-32010' size=3}}
+   {{guitar-chords title='Amaj7#11' fret='5,x,7,6,4,4' label='2,x,4,3,1,1'}}
 ```
 
 into this:
 
-image goes here
+![ScreenShot](http://i.imgur.com/NAvrmef.png)
 
 ## Using with an Ember CLI project
 
@@ -18,15 +19,12 @@ image goes here
 
 Then you can use the `{{guitar-chords}}` component.
 
-The component takes 4 attributes: name, positions, fingers, and size.
-The defaults are an open D chord:
+The component takes 4 attributes: title, fret, label, and music.
+The `fret` attr is used to make a computed property `id` and is required to
+be present and unique for the image to render. Unfortunately, this means that
+you cannot display the same chord twice on one page for the moment :(.
 
-```js
-name: 'D',
-positions: 'xx0232',
-fingers: '---132',
-size: '3'
-```
+The `music` attr is a boolean, `default true`, that shows a `Play!` button.
 
 ## Contributing
 
