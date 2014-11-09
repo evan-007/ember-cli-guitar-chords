@@ -6,6 +6,8 @@ var app = new EmberAddon();
 
 app.import('vendor/chordsJs/chords.js');
 app.import('vendor/audiosynth/audiosynth.js');
+app.import('vendor/chordography/chordography.js');
+app.import('vendor/chordography/chordography.css');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

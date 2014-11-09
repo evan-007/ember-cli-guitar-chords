@@ -2,12 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   music: true,
-  name: 'D',
-  positions: 'xx0232',
-  fingers: '---132',
-  size: '3',
+  title: 'D',
+  fret: 'x,8,7,5,6,5',
+  label: 'x,4,3,1,2,1',
+  footer: ' ,F,A,C,F,A',
   didInsertElement: function() {
-    chords.replaceOne(this.get('element'));
+    // chords.replaceOne(this.get('element'));
+    // var placeholder = this.get('element');
+    var placeholder = document.getElementById("exampleChart");
+
+    console.log(placeholder)
+    var csi = {title:this.get('title'),fret:this.get('fret'),
+      label:this.get('label'),footer: this.get('footer')};
+    var myChart = chartMaker();
+    myChart(placeholder,csi);
   },
   click: function() {
     this.sendAction();
@@ -19,7 +27,7 @@ export default Ember.Component.extend({
       var strings = ['E','A','D','G','B','E']
       // starting octaves of the open strings
       var octaves = [2,2,3,3,3,4]
-      var chord = this.get('positions').split('');
+      var chord = this.get('fret').split(',');
 
       var chordNotes = strings.map(function(stringName, index){
         if (chord[index] === 'x') {

@@ -1,4 +1,7 @@
-<chord {{bind-attr name=name positions=positions fingers=fingers size=size music=music}}></chord>
+{{!-- <chord {{bind-attr name=name positions=positions fingers=fingers size=size music=music}}></chord> --}}
+
+<svg id="exampleChart" class='chordChart' {{bind-attr title=title fret=fret label=label footer=footer music=music}} class="chordChart">My chart goes here</svg>
+
 {{#if music}}
   <button {{action 'playMusic' }}>Play!</button>
 {{/if}}

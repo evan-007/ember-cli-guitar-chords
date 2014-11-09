@@ -1,0 +1,14 @@
+svg.chordChart{
+  background: white;
+  border: 1px #ccc solid;
+  }
+svg.chordChart .grid{
+  stroke: black;
+  stroke-linecap: round;
+  }
+svg.chordChart .labels{
+  fill: white;
+  }
+svg.chordChart .title{
+  font-size:140%;
+  }
