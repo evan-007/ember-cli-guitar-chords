@@ -4,7 +4,6 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 var app = new EmberAddon();
 
-app.import('vendor/chordsJs/chords.js');
 app.import('vendor/audiosynth/audiosynth.js');
 app.import('vendor/chordography/chordography.js');
 app.import('vendor/chordography/chordography.css');

@@ -13,11 +13,8 @@ export default Ember.Component.extend({
     // chords.replaceOne(this.get('element'));
     // var placeholder = this.get('element');
     var id = this.$().find('svg').attr('id')
-    console.log(id)
     // this comes from chordography
     var placeholder = document.getElementById(id);
-
-    console.log(placeholder)
     var csi = {title:this.get('title'),fret:this.get('fret'),
       label:this.get('label'),footer: this.get('footer')};
     var myChart = chartMaker();
