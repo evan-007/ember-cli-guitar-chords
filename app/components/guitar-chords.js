@@ -6,10 +6,14 @@ export default Ember.Component.extend({
   fret: 'x,8,7,5,6,5',
   label: 'x,4,3,1,2,1',
   footer: ' ,F,A,C,F,A',
+  id: 'cat',
   didInsertElement: function() {
     // chords.replaceOne(this.get('element'));
     // var placeholder = this.get('element');
-    var placeholder = document.getElementById("exampleChart");
+    var id = this.$().find('svg').attr('id')
+    console.log(id)
+    // this comes from chordography
+    var placeholder = document.getElementById(id);
 
     console.log(placeholder)
     var csi = {title:this.get('title'),fret:this.get('fret'),
