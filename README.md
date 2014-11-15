@@ -26,6 +26,20 @@ you cannot display the same chord twice on one page for the moment :(.
 
 The `music` attr is a boolean, `default true`, that shows a `Play!` button.
 
+The chord chart and play button are each wrapped in `div` to style as needed.
+
+```
+<div class='guitar-chords guitar-tab'>
+  <svg class='chordChart' {{bind-attr id=id title=title fret=fret label=label footer=footer music=music}} class="chordChart"></svg>
+</div>
+
+{{#if music}}
+  <div class='guitar-chords guitar-music'>
+      <button {{action 'playMusic' }}>Play!</button>
+  </div>
+{{/if}}
+```
+
 ## Contributing
 
 Do it!

@@ -1,5 +1,9 @@
-<svg class='chordChart' {{bind-attr id=id title=title fret=fret label=label footer=footer music=music}} class="chordChart">My chart goes here</svg>
+<div class='guitar-chords guitar-tab'>
+  <svg class='chordChart' {{bind-attr id=id title=title fret=fret label=label footer=footer music=music}} class="chordChart"></svg>
+</div>
 
 {{#if music}}
-  <button {{action 'playMusic' }}>Play!</button>
+  <div class='guitar-chords guitar-music'>
+      <button {{action 'playMusic' }}>Play!</button>
+  </div>
 {{/if}}
