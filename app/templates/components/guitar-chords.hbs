@@ -4,6 +4,6 @@
 
 {{#if music}}
   <div class='guitar-chords guitar-music'>
-      <button {{action 'playMusic' }}>Play!</button>
+      <button {{bind-attr class=button-class}} {{action 'playMusic'}}>Play!</button>
   </div>
 {{/if}}

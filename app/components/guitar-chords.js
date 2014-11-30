@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   fret: 'x,8,7,5,6,5',
   label: 'x,4,3,1,2,1',
   footer: '',
+  class: '',
   id: function(){
     return this.get('fret')
   }.property('fret'),
